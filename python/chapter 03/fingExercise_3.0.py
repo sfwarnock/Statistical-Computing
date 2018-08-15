@@ -12,11 +12,19 @@ Created on Tue Aug 14 2018
 
 def main():
     userInteger = eval(input('Enter an interger: '))
-    pwr, root = 0, 1
+    pwr, root = 0, 0
+    ans = root ** pwr
+    
+    while True:
+        if ans != userInteger:
+            root +=1
+            while pwr >= 0 and pwr <= 6:
+                pwr = 0
+                print (root, pwr)
+            pwr += 1
+        else:
+            if ans == userInteger:
+                print(root, pwr)
 
-    while root**pwr != userInteger and pwr < 6:
-        pwr += 1
-        ansOne = root ** pwr
-        print('Fisrt Loop', root, pwr, ansOne)
-
+        
 main()
