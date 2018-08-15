@@ -12,19 +12,20 @@ Created on Tue Aug 14 2018
 
 def main():
     userInteger = eval(input('Enter an interger: '))
-    pwr, root = 0, 0
-    ans = root ** pwr
-    
-    while True:
-        if ans != userInteger:
-            root +=1
-            while pwr >= 0 and pwr <= 6:
-                pwr = 0
-                print (root, pwr)
-            pwr += 1
-        else:
-            if ans == userInteger:
-                print(root, pwr)
+    pwr, root = 1, 0
 
-        
+    while pwr < 6:
+        if userInteger < 0:
+            root = userInteger
+        else:
+            root = 0
+        while root ** pwr <= userInteger:
+            if root ** pwr == userInteger:
+                print (root, pwr)
+            else:
+                if userInteger ** 1 != userInteger:
+                    print('No integer pair exist.')
+            root += 1
+        pwr += 1
+    
 main()
