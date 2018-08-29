@@ -11,8 +11,8 @@ Created on Tue Aug 28 2018
 #   either string occurs anywhere in the other, and False otherwise.
 #   Hint: you might want to use the built-in str operation in.
 
-def isIn(string1, string2):
-    if string1 in string2:
-        return True
-    if string1 not in string2:
-        return False
+def isIn(string1, string2, isInString):
+    if isInString:
+        print(string2)
+    else:
+        print(string1)
